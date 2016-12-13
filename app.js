@@ -2,11 +2,15 @@
 
 // AJAX Load Components
 $('#navContainer').load('templates/nav.html');
-$('#mainContainer').load('partials/home.html');
-$('#footerContainer').load('templates/footer.html');
-$('#modalContainer').load('templates/modal.html');
+$('#mainContainer').load('partials/home.html', function() {
+  // Resize home background to fill viewport
+  var $headerContent = $('header .header-content');
+  var windowHeight = $(window).height();
+  if ($(window).height() > $headerContent.height()) {
+    $headerContent.css({'height': windowHeight + 'px'});
+    $('#carousel').css({'max-height': windowHeight + 'px'});
+  }
 
-$(function() {
   // jQuery for page scrolling feature - requires jQuery Easing plugin
   $('a.page-scroll').bind('click', function(event) {
     var $anchor = $(this);
@@ -40,8 +44,8 @@ $(function() {
   );
   $('h2').fitText(
     1.6, {
-      minFontSize: '25px',
-      maxFontSize: '40px'
+      minFontSize: '30px',
+      maxFontSize: '45px'
     }
   );
 
@@ -51,11 +55,6 @@ $(function() {
       top: 100
     }
   });
-
-  // Resize home background to fill viewport
-  var $headerContent = $('header .header-content');
-  var windowHeight = $(window).height();
-  if ($(window).height() > $headerContent.height()) {
-    $headerContent.css({'height': windowHeight + 'px'});
-  }
 });
+$('#footerContainer').load('templates/footer.html');
+$('#modalContainer').load('templates/modal.html');

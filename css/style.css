@@ -1,7 +1,7 @@
 /*
- * blue: #a2bdbe;
- * blue-dark: #759d9f
-;
+ * http://www.color-hex.com/color/a2bdbe
+ * green-light: #a2bdbe
+ * green-dark: #759d9f
  */
 
 html,
@@ -20,7 +20,8 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #a2bdbe;
+    border-color: #759d9f;
+    font-weight: 400;
     border-width: 3px;
 }
 
@@ -28,8 +29,13 @@ hr.light {
     border-color: #fff;
 }
 
+hr.dark {
+    border-color: #333;
+}
+
 a {
-    color: #a2bdbe;
+    color: #759d9f;
+    font-weight: 400;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -37,8 +43,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #759d9f
-;
+    color: #a2bdbe;
 }
 
 h1,
@@ -50,7 +55,11 @@ h6 {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-h2,
+h1,
+h2 {
+    font-weight: 600;
+}
+
 h3 {
     font-weight: 300;
 }
@@ -65,7 +74,8 @@ strong {
 }
 
 .post:nth-child(even) {
-    background: #a2bdbe;
+    background: #759d9f;
+    font-weight: 400;
 }
 
 .bg-header {
@@ -79,12 +89,16 @@ strong {
 
 #about.bg-header {
     background-image: url(../img/bg-cover2.jpg);
-    background-position: initial;
+    background-position: 0 100%;
 }
 
 #accommodations.bg-header {
     background-image: url(../img/bg-cover3.jpg);
     background-position: initial;
+}
+
+.hotel-description {
+    min-height: 50px;
 }
 
 #gifts.bg-header {
@@ -130,7 +144,8 @@ section {
 }
 
 section h2 {
-    color: #a2bdbe;
+    color: #759d9f;
+    font-weight: 400;
 }
 
 aside {
@@ -179,7 +194,7 @@ aside {
 .navbar-default .nav>li.active>a:hover,
 .navbar-default .nav>li.active>a:focus:hover,
 .navbar-default.affix-top .nav>li.active>a:hover {
-    color: #a2bdbe !important;
+    color: #759d9f !important;
     background: transparent;
     box-shadow: none;
 }
@@ -227,7 +242,8 @@ aside {
 
     .navbar-default .nav>li>a.modal:hover {
         background: #fff;
-        color: #a2bdbe;
+        color: #759d9f;
+        font-weight: 400;
     }
 
     .navbar-default.affix {
@@ -238,7 +254,8 @@ aside {
 
     .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 18px;
-        color: #a2bdbe;
+        color: #759d9f;
+        font-weight: 400;
         padding: 15px;
     }
 
@@ -258,8 +275,7 @@ aside {
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #759d9f
-;
+        color: #a2bdbe;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand img {
@@ -274,11 +290,13 @@ aside {
 
     .navbar-default.affix .nav>li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #a2bdbe;
+        color: #759d9f;
+        font-weight: 400;
     }
 
     .navbar-default.affix .nav>li>a.modal {
-        background: #a2bdbe;
+        background: #759d9f;
+        font-weight: 400;
         border: 0;
         border-radius: 3px;
         color: #fff;
@@ -287,8 +305,7 @@ aside {
     }
 
     .navbar-default.affix .nav>li>a.modal:hover {
-        background: #759d9f
-;
+        background: #a2bdbe;
         color: #fff !important;
     }
 }
@@ -407,8 +424,7 @@ header .header-content p {
 }
 
 #gifts h4 {
-    color: #759d9f
-;
+    color: #a2bdbe;
     font-family: 'Raleway', sans-serif;
     margin: 25px 0;
 }
@@ -478,7 +494,8 @@ header .header-content p {
 }
 
 .text-primary {
-    color: #a2bdbe;
+    color: #759d9f;
+    font-weight: 400;
 }
 
 .no-gutter > [class*=col-] {
@@ -502,10 +519,11 @@ header .header-content p {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-    background: #a2bdbe;
+    background: #759d9f;
+    font-weight: 400;
     border: 1px solid #fff;
-    color: #f*/ff;
-}
+    color: #fff;
+}*/
 
 .btn-default:active,
 .btn-default.active,
@@ -541,8 +559,10 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    background: #a2bdbe;
-    border-color: #a2bdbe;
+    background: #759d9f;
+    font-weight: 400;
+    border-color: #759d9f;
+    font-weight: 400;
     color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -555,10 +575,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-    background: #759d9f
-;
-    border-color: #759d9f
-;
+    background: #a2bdbe;
+    border-color: #a2bdbe;
     color: #fff;
 }
 
@@ -586,13 +604,35 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #a2bdbe;
-    background: #a2bdbe;
+    border-color: #759d9f;
+    font-weight: 400;
+    background: #759d9f;
+    font-weight: 400;
 }
 
 .btn-primary .badge {
-    color: #a2bdbe;
+    color: #759d9f;
+    font-weight: 400;
     background: #fff;
+}
+
+.btn-info {
+    background: #fff;
+    border: 2px solid #759d9f;
+    box-shadow: none;
+    color: #759d9f;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open>.dropdown-toggle.btn-info {
+    background: #759d9f;
+    border-color: #759d9f;
+    color: #fff;
 }
 
 .btn {
@@ -644,14 +684,18 @@ footer p {
 }
 
 .modal-header {
-    background: #759d9f
-;
+    background: #a2bdbe;
     color: #fff;
 }
 
 .modal-body label {
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.modal-body label .required {
+    color: red;
 }
 
 .modal-footer {

@@ -1,6 +1,6 @@
 #DAVID & JEAN Wedding Website
 
-This repository features a simple HTML/CSS/JavaScript solution for a wedding website.
+This repository features a simple HTML/CSS/JavaScript solution for a wedding website
 
 ## How to use this repo
 Updates will be made using Github Pages
