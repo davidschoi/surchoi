@@ -513,18 +513,6 @@ header .header-content p {
     transition: all .35s;
 }
 
-/*.btn-default:hover,
-.btn-default:focus,
-.btn-default.focus,
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-    background: #759d9f;
-    font-weight: 400;
-    border: 1px solid #fff;
-    color: #fff;
-}*/
-
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
