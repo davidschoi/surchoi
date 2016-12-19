@@ -10,19 +10,24 @@
         <hr>
         <h2>Are Getting Married!</h2>
         <div class="call-to-action">
-            <a class="btn btn-primary btn-xl" data-toggle="modal" data-target="#modal">RSVP</a>
+            <button class="btn btn-primary btn-xl" data-toggle="modal" data-target="#modal">RSVP</button>
         </div>
     </div>
 </header>
 
 <!--
-
 TODO ITEMS
-Write Our meeting Story from both perspectives section
-Wedding Party - Names
-Create a separate page as alternate response when google form submits, indicating their name as a response
+
+Create a separate page as alternate response when google form submits
+    Indicate name in thank you as response
+    Add Attending and Not Attending buttons
+        Manipulate text input form if certain button is clicked?
+
 Refactor and decrease image size remove comments and unused css
 
+Remove AJAX calls to increase performance?
+
+Submit button disabled unless all fields are filled out
 -->
 
 <section id="wedding">
@@ -34,17 +39,18 @@ Refactor and decrease image size remove comments and unused css
         </div>
         <div class="row">
             <div class="col-sm-5 col-sm-offset-1">
-                <h3><strong>SERRA PLAZA</strong></h3>
+                <h3 class="text-strong">SERRA PLAZA</h3>
                 <p><a href="https://www.google.com/maps/place/Serra+Plaza/@33.4973605,-117.6672808,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcf1e9ace04265:0xa4e6f3939f94f14f!8m2!3d33.4973605!4d-117.6650921" target="_blank">31910 Del Obispo Street #125<br>San Juan Capistrano, CA</a></p>
             </div>
             <div class="col-sm-5">
-                <h3><strong>MARCH 11, 2017</strong></h3>
-                <p><strong>@4:00pm</strong>. Please be prompt<br>And dress to impress!</p>
+                <h3 class="text-strong">MARCH 11, 2017</h3>
+                <p><span class="text-strong">@4:00pm</span>. Please be prompt<br>And dress to impress!</p>
             </div>
         </div>
     </div>
 </section>
-<div id="about" class="bg-header">
+
+<div id="story" class="bg-header">
     <div class="color-overlay"></div>
     <div class="container text-center">
         <h2>Our Story</h2>
@@ -52,11 +58,11 @@ Refactor and decrease image size remove comments and unused css
         <h3>How you doin?</h3>
     </div>
 </div>
-<section class="bg-secondary">
+<section class="bg-secondary section-story">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-5">
-                David picture here
+        <div class="row flex row-story">
+            <div class="col-sm-5 text-center">
+                <img src="img/story-david.jpg" alt="david solo picture" class="img-circle"/>
             </div>
             <div class="col-sm-7">
                 <h3>How we met</h3>
@@ -64,32 +70,44 @@ Refactor and decrease image size remove comments and unused css
                 <p>Surpisingly, we really hit it off and her patience to my ridiculous sense of humor and her beautiful smile and genuine kindness made me so happy. And I realized that I must move back to LA. With random confidence I told her, "We're going to go on three dates and you're going to fall in love with me..." And HA! It actually worked! After driving/flying from SF to LA every 2 weeks and Facetiming everyday in between we made it through 7 months of long distance. Finally we were living in the same city playing, eating, and laughing together every day. And to this day I still get the same joy and excitement anticipating our day's first hug and sweet little kisses.</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row flex row-story">
             <div class="col-sm-7">
                 <h3>How we really met</h3>
-                <p>I was living in San Francisco at the time and I came down to visit on 10/3/2014. I went to Wolf &amp; Crane for Stella's birthday gathering and I saw my beautiful Jean out yonder. I pointed at her and signaled her to come hither. I told her my usual really hilarious jokes and she laughed and laughed and laughed. She was clearly digging the gums. She even did the whole hitting my arm thing practically screaming, "you're the funniest guy I've ever met in my entire life" and of course she felt the guns and realized I wasn't just funny, but that my body was no accident.</p>
-                <p>Surpisingly, we really hit it off and her patience to my ridiculous sense of humor and her beautiful smile and genuine kindness made me so happy. And I realized that I must move back to LA. With random confidence I told her, "We're going to go on three dates and you're going to fall in love with me..." And HA! It actually worked! After driving/flying from SF to LA every 2 weeks and Facetiming everyday in between we made it through 7 months of long distance. Finally we were living in the same city playing, eating, and laughing together every day. And to this day I still get the same joy and excitement anticipating our day's first hug and sweet little kisses.</p>
+                <p>So what really happened was… David couldn’t even remember my name most of the night. He kept mixing up my name with Julie’s and acted as if it was intentional (granted I was calling him “John” half the night hehe). He asked me the most bizarre questions, like “what do you rate yourself 1 out of 10?” My answer was 12. Or I’d ask him what he did for a living and he’d answer with “I make money. Why? Do you want some?” But for whatever reason, I thought he was hilarious. Cocky. But hilarious. He didn’t even ask me for my number that night, which I found kind of refreshing.</p>
+                <p>Little did I know, I had met the most generous and un-cocky guy ever that night. As we started to facetime more and more, I could see how genuine and lovable he was. I found myself coming home excited to facetime with this almost stranger. He started calling me “his girl” and said I’d fall in love with him after 3 dates which I thought was RIDICULOUS, but I guess he was right. I feel like he brainwashed me.. heh jk.</p>
+                <p>David has really opened my eyes to the beauties of this world. My soul is so intensely drawn to him and I don't know what I'd do without him. Our friends will testify that we can't go a day without seeing each other, and I'm pretty sure they'd like to throw up on our faces. Sorry guys! I knew I wanted to marry him since our third date, so I will mention that I asked him to marry me first. He got annoyed and proposed to me 3 months after. But anyway, the rest is history. </p>
             </div>
-            <div class="col-sm-5">
-                Jean Picture Here
+            <div class="col-sm-5 text-center">
+                <img src="img/story-david.jpg" alt="david solo picture" class="img-circle"/>
             </div>
         </div>
-        <!-- <div class="row">
+    </div>
+    <div class="container text-center wedding-party-container">
+        <div class="row">
+            <h2>Wedding Party</h2>
+            <hr>
+            <h3>Bridesmaids &amp; Groomsmen</h3>
+        </div>
+        <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+                <h3 class="text-strong">Jeansmaids</h3>
+                <p>Joy Kim</p>
+                <p>Jennifer Lee</p>
+                <p>Helen Oh</p>
+                <p>Julie Pak</p>
+            </div>
             <div class="col-sm-5">
-                A nice image
+                <h3 class="text-strong">Davidsmen</h3>
+                <p>Jason Choi</p>
+                <p>Josh Yoon</p>
+                <p>Derrick Wu</p>
+                <p>Abraham Hwang</p>
             </div>
-            <div class="col-sm-7 text-center">
-                <h3>The Proposal</h3>
-                <hr>
-                <h4>JUNE 04, 2016</h4>
-                <p>It didn't take me long for me to know that Jean was the one and so I bought the ring in Jan 2016. I wanted to surprise her even though she was always threatening to propose to me first. Next step was to ask her dad for permission to marry my Jean. I called my go to fob, Richard Lee, and he prepped me for some solid Korean. I wrote out, rehearsed, and practiced my Korean speech and I was ready. I had some spontaneous dinner with Mr. Sur and Jean's brother, Brandon. And all of a sudden, Mr. Sur had to bounce as I was just barely getting started on my 6th slice of pizza. As he was getting into his car, I ran outside, pizza crumbs all over my face and crushed red peppers in between all my teeth and delivered my speech... In the absolutely worst Korean imaginable. And he gave me his blessing! Luckily he didn't give me a hug or touch my body because I was emitting so much heat and sweating everywhere.</p>
-                <p>It was time to propose! It was her birthday weekend so I had a "romantic brunch" for her prepared at Newport Beach. We "arrived early" so we went for a "spontaneous walk" along the pier. Almost got to the spot, but I forgot the ring! Jean wanted some water and suggested we just go early, but nervously I rejected her request and awkwardly asked her to wait just a second while I ran to the car. Got the ring as it protruded out of my pants. Took her to the binoculars by the pier where her brother and cousin, Jana, were waiting holding a sign that said "Will you marry David?" Again I had an amazing speech prepared, but couldn't mutter the words. Luckily Jean intervened and said "Yes yes of course I'll marry you!"</p>
-                <p>We went back home where I had "actually prepared food" and had our dearest friends from home and all around the country fly in to surprise Jean and celebrate our engagement! Once we got upstairs, Jean couldn't help but cry tears of Joy ;) overwhelmed by her beloved friends.</p>
-            </div>
-        </div> -->
+        </div>
     </div>
 </section>
-<div id="accommodations" class="bg-header">
+
+<div id="travel" class="bg-header">
     <div class="color-overlay"></div>
     <div class="container text-center">
         <h2>Lay down your head</h2>
@@ -101,7 +119,7 @@ Refactor and decrease image size remove comments and unused css
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-                <p class="text-center"><em>We recommend flying into John Wayne Airport (SNA)</em></p>
+                <p class="text-center text-italic">We recommend flying into John Wayne Airport (SNA)</p>
             </div>
         </div>
         <hr>
@@ -133,11 +151,12 @@ Refactor and decrease image size remove comments and unused css
         <hr>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-                <p class="text-center"><em>Wherever you end up staying, please don't drink and drive.<br>Carpool and designate a driver!</em></p>
+                <p class="text-center text-italic">Wherever you end up staying, please don't drink and drive.<br>Carpool and designate a driver!</p>
             </div>
         </div>
     </div>
 </section>
+
 <div id="gifts" class="bg-header">
     <div class="color-overlay"></div>
     <div class="container text-center">
@@ -146,30 +165,31 @@ Refactor and decrease image size remove comments and unused css
         <h3>Give us money</h3>
     </div>
 </div>
-<section>
+<section class="gifts bg-secondary">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-center">
-                <h3>We know traveling can be expensive so your presence at the wedding is plenty</h3>
-                <h3>But if you would like you can help us fund our honeymoon.</h3>
+                <h3>We know traveling can be expensive so your presence at our wedding is plenty</h3>
+                <h3>If you really want to give us something, a contribution to our honeymoon fund would be awesome.</h3>
                 <br>
                 <h3>Here's how you can give us money:</h3>
-                <h4>– 1 –</h4>
-                <p>Hand deliver a thoughtful card and a big check to us at the wedding</p>
-                <h4>– 2 –</h4>
-                <p>Contribute to our marriage through <a href="http://paypal.me/davidgumzchoi">PayPal</a> or <a href="http://www.venmo.com/davidgumzchoi">Venmo</a></p>
+                <h4 class="text-strong">– 1 –</h4>
+                <p>Hand deliver a check to us at the wedding</p>
+                <h4 class="text-strong">– 2 –</h4>
+                <p>Contribute to our fund through <a href="http://paypal.me/davidgumzchoi">PayPal</a> or <a href="http://www.venmo.com/davidgumzchoi">Venmo</a></p>
             </div>
         </div>
     </div>
 </section>
+
 <div id="rsvp" class="bg-header">
     <div class="color-overlay"></div>
     <div class="container text-center">
         <h2>Please RSVP</h2>
         <hr>
-        <h3>Thanks!</h3>
+        <h3>NOW!</h3>
         <div class="call-to-action">
-            <a class="btn btn-primary btn-xl" data-toggle="modal" data-target="#modal">RSVP</a>
+            <button class="btn btn-primary btn-xl" data-toggle="modal" data-target="#modal">RSVP</button>
         </div>
     </div>
 </div>

@@ -69,13 +69,16 @@ p {
     line-height: 1.5;
 }
 
-strong {
-    font-weight: 500;
+.text-strong {
+    font-weight: 600;
 }
 
-.post:nth-child(even) {
-    background: #759d9f;
-    font-weight: 400;
+.text-italic {
+    font-style: italic;
+}
+
+.inline-block {
+    display: inline-block;
 }
 
 .bg-header {
@@ -87,28 +90,22 @@ strong {
     padding: 150px 0;
 }
 
-#about.bg-header {
+#story.bg-header {
     background-image: url(../img/bg-cover2.jpg);
-    background-position: 0 100%;
 }
 
-#accommodations.bg-header {
+#travel.bg-header {
     background-image: url(../img/bg-cover3.jpg);
-    background-position: initial;
-}
-
-.hotel-description {
-    min-height: 50px;
+    background-position: 50% 15%;
 }
 
 #gifts.bg-header {
     background-image: url(../img/bg-cover4.jpg);
-    background-position: initial;
 }
 
 #rsvp.bg-header {
     background-image: url(../img/bg-cover5.jpg);
-    background-position: initial;
+    background-position: 50% 0;
 }
 
 .bg-header .container {
@@ -127,11 +124,6 @@ strong {
 
 .bg-secondary {
     background: #eee;
-}
-
-.post:nth-child(odd) {
-    color: #fff;
-    background: #222;
 }
 
 .bg-dark {
@@ -199,11 +191,12 @@ aside {
     box-shadow: none;
 }
 
-.navbar-default.affix-top .nav>li.active>a {
-    color: rgba(255,255,255,.7) !important;
-}
-
 @media(min-width:768px) {
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+
     .navbar-default {
         background: transparent;
         border-color: transparent;
@@ -308,6 +301,14 @@ aside {
         background: #a2bdbe;
         color: #fff !important;
     }
+
+    .navbar-default.affix-top .nav>li.active>a {
+        color: rgba(255,255,255,.7) !important;
+    }
+
+    .hotel-description {
+        min-height: 50px;
+    }
 }
 
 @media(max-width:830px) and (min-width:768px) {
@@ -411,6 +412,14 @@ header .header-content p {
 #wedding .input-group {
     width: 100%;
     max-width: 405px;
+}
+
+.row-story {
+    margin-bottom: 25px;
+}
+
+.wedding-party-container {
+    margin-top: 25px;
 }
 
 @media(max-width: 767px) {
