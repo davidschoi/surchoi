@@ -1,6 +1,5 @@
 'use strict';
 
-// AJAX load components
 $(document).ready(function() {
   // Resize home background to fill viewport
   var $headerContent = $('header .header-content');
