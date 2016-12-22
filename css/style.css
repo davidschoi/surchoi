@@ -12,10 +12,13 @@ body {
 
 body {
     font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 18px;
     letter-spacing: .3px;
     line-height: 1.5;
+}
+
+body.modal-open {
+    overflow: hidden;
 }
 
 hr {
@@ -55,6 +58,18 @@ h6 {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 35px;
+}
+
 h1,
 h2 {
     font-weight: 600;
@@ -65,8 +80,7 @@ h3 {
 }
 
 p {
-    font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.8;
 }
 
 .text-strong {
@@ -82,7 +96,7 @@ p {
 }
 
 .bg-header {
-    background: transparent url(../img/bg-cover.jpg) no-repeat 50% 50%;
+    background: transparent url(../img/bg-cover.jpg) no-repeat 50% 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -91,21 +105,21 @@ p {
 }
 
 #story.bg-header {
-    background-image: url(../img/bg-cover2.jpg);
+    background-image: url(../img/bg-story.jpg);
+    background-position: 50% 50%;
 }
 
 #travel.bg-header {
-    background-image: url(../img/bg-cover3.jpg);
+    background-image: url(../img/bg-travel.jpg);
     background-position: 50% 15%;
 }
 
 #gifts.bg-header {
-    background-image: url(../img/bg-cover4.jpg);
+    background-image: url(../img/bg-gifts.jpg);
 }
 
 #rsvp.bg-header {
-    background-image: url(../img/bg-cover5.jpg);
-    background-position: 50% 0;
+    background-image: url(../img/bg-rsvp.jpg);
 }
 
 .bg-header .container {
@@ -119,7 +133,6 @@ p {
 
 .bg-header h3 {
     color: #ddd;
-    font-weight: 300;
 }
 
 .bg-secondary {
@@ -174,7 +187,6 @@ aside {
 .navbar-default .nav>li>a,
 .navbar-default .nav>li>a:focus {
     color: #222;
-    font-size: 16px;
     text-shadow: none;
     text-transform: uppercase;
 }
@@ -192,11 +204,6 @@ aside {
 }
 
 @media(min-width:768px) {
-    .flex {
-        display: flex;
-        align-items: center;
-    }
-
     .navbar-default {
         background: transparent;
         border-color: transparent;
@@ -330,6 +337,14 @@ aside {
         display: block;
         width: 90px;
     }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
 }
 
 header {
@@ -418,6 +433,15 @@ header .header-content p {
     margin-bottom: 25px;
 }
 
+.row-story img {
+    margin-top: 30px;
+}
+
+.row-story p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
 .wedding-party-container {
     margin-top: 25px;
 }
@@ -436,70 +460,6 @@ header .header-content p {
     color: #a2bdbe;
     font-family: 'Raleway', sans-serif;
     margin: 25px 0;
-}
-
-.portfolio-box {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    max-width: 650px;
-}
-
-.portfolio-box .portfolio-box-caption {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #fff;
-    opacity: 0;
-    background: rgba(162,189,190,.9);
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translateY(-50%);
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    padding: 0 15px;
-    font-family: 'Raleway', sans-serif;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    font-size: 18px;
-}
-
-.portfolio-box:hover .portfolio-box-caption {
-    opacity: 1;
-}
-
-@media(min-width:768px) {
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-        font-size: 16px;
-    }
-
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-        font-size: 22px;
-    }
-}
-
-.call-to-action {
-    margin-top: 50px;
 }
 
 .text-primary {
@@ -607,12 +567,6 @@ fieldset[disabled] .btn-primary.active {
     font-weight: 400;
 }
 
-.btn-primary .badge {
-    color: #759d9f;
-    font-weight: 400;
-    background: #fff;
-}
-
 .btn-info {
     background: #fff;
     border: 2px solid #759d9f;
@@ -633,10 +587,12 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn {
+    font-size: 16px;
     text-transform: uppercase;
 }
 
 .btn-xl {
+    margin-top: 50px;
     padding: 15px 30px;
 }
 
@@ -685,14 +641,14 @@ footer p {
     color: #fff;
 }
 
-.modal-body label {
+.modal-body .form-group > label {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
     font-weight: 500;
 }
 
-.modal-body label .required {
-    color: red;
+.modal-body .radio {
+    margin-top: 0;
 }
 
 .modal-footer {

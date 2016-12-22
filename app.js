@@ -1,8 +1,7 @@
 'use strict';
 
 // AJAX load components
-$('#navContainer').load('templates/nav.html');
-$('#mainContainer').load('partials/home.html', function() {
+$(document).ready(function() {
   // Resize home background to fill viewport
   var $headerContent = $('header .header-content');
   var windowHeight = $(window).height();
@@ -15,7 +14,7 @@ $('#mainContainer').load('partials/home.html', function() {
   $('a.page-scroll').bind('click', function(event) {
     var $anchor = $(this);
     $('html, body').stop().animate({
-      scrollTop: ($($anchor.attr('href')).offset().top - 50)
+      scrollTop: ($($anchor.attr('href')).offset().top)
     }, 1250, 'easeInOutExpo');
     event.preventDefault();
   });
@@ -33,21 +32,7 @@ $('#mainContainer').load('partials/home.html', function() {
   // Closes modal on submit
   $('#modal [type="submit"]').on('click', function() {
     $('#modal .close').click();
-  })
-
-  // Fit text plugin for main header
-  $('h1').fitText(
-    1.2, {
-      minFontSize: '50px',
-      maxFontSize: '80px'
-    }
-  );
-  $('h2').fitText(
-    1.6, {
-      minFontSize: '30px',
-      maxFontSize: '45px'
-    }
-  );
+  });
 
   // Offset for main navigation
   $('#nav').affix({
@@ -55,41 +40,19 @@ $('#mainContainer').load('partials/home.html', function() {
       top: 100
     }
   });
-});
-$('#footerContainer').load('templates/footer.html');
-$('#modalContainer').load('templates/modal.html');
 
-$(document).ready(function() {
-  // Attending Text
-  var $buttonAttending = $('#modal .btn-success'),
-      $buttonNotAttending = $('#modal .btn-danger'),
-      $inputAttending = $('input[name="entry.519471964"]'),
-      $textAttending = $('#modal .text-success'),
-      $textNotAttending = $('#modal .text-danger'),
-      $anchorChangeResponse = $('.change-response');
+  // Attending Input Radio Submit to Google Form
+  var $inputAttending = $('input[name="entry.519471964"]');
+  $inputAttending.val('yes');
 
-  $buttonAttending.click(function() {
-    $buttonAttending.addClass('hidden');
-    $buttonNotAttending.addClass('hidden');
-    $textAttending.removeClass('hidden');
-    $anchorChangeResponse.removeClass('hidden');
+  $('input[value="yes"]').click(function() {
+    console.log('attending');
     $inputAttending.val('yes');
   });
 
-  $buttonNotAttending.click(function() {
-    $buttonNotAttending.addClass('hidden');
-    $buttonAttending.addClass('hidden');
-    $textNotAttending.removeClass('hidden');
-    $anchorChangeResponse.removeClass('hidden');
+  $('input[value="no"]').click(function() {
+    console.log('not attending');
     $inputAttending.val('no');
-  });
-
-  $anchorChangeResponse.click(function() {
-    $buttonAttending.removeClass('hidden');
-    $buttonNotAttending.removeClass('hidden');
-    $textAttending.addClass('hidden');
-    $anchorChangeResponse.addClass('hidden');
-    $textNotAttending.addClass('hidden');
   });
 
   // +1 condition display
@@ -125,5 +88,29 @@ $(document).ready(function() {
     if($.inArray(this.value.toLowerCase().replace(' ', ''), plusOneArray) > -1) {
       $inputPlusOneContainer.removeClass('hidden');
     }
+  });
+
+  // Validate Form Submit
+  var $fields = $('#modal .form-control.required'),
+      $submitButton = $('.modal-footer .btn-primary[type="submit"]'),
+      $errorMessage = $('.error-message');
+
+  $fields.keyup(function() {
+    var $emptyFields = $fields.filter(function() {
+      return $.trim(this.value) === '';
+    });
+
+    $submitButton.attr('disabled', true);
+
+    if (!$emptyFields.length) {
+      $errorMessage.addClass('hidden');
+      $submitButton.prop('disabled', false);
+    } else {
+      $submitButton.prop('disabled', true);
+    }
+  });
+
+  $('.btn-submit-container').click(function() {
+    $errorMessage.removeClass('hidden');
   });
 });
