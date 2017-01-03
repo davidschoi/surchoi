@@ -60,7 +60,7 @@ $(document).ready(function() {
     "jenniferlee",
     "helenoh",
     "juliepak",
-    "joshyoon","eunicepark","euniceyoon",
+    "joshyoon","joshuayoon","eunicepark","euniceyoon",
     "derrickwu","margaretcho",
     "danielpark","gloriasong","gloriapark",
     "alexvareta","lysettevareta",
@@ -69,12 +69,12 @@ $(document).ready(function() {
     "dianasearle",
     "eugeneeum","jenniferlee",
     "annasanders","annasanderslee","annalee","chenghoulee","cheng-houlee",
-    "andykwon","dianekwon","dianeluong","dianeluongkwon",
+    "andykwon","andrewkwon","dianekwon","dianeluong","dianeluongkwon",
     "ericcho",
     "richardlee","hestialim","hestialee",
-    "philjung","hannahjung","hannahsheen",
+    "philjung","phillipjung","hannahjung","hannahsheen",
     "sophiecho","sophiekim","paulkim",
-    "michellehong","michellekim","jonathankim",
+    "michellehong","michellekim","jonathankim","jonkim"
     "richardpark","christineyun",
     "davidkim","tammykim"
   ];
