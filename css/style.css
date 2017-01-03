@@ -17,10 +17,6 @@ body {
     line-height: 1.5;
 }
 
-body.modal-open {
-    overflow: hidden;
-}
-
 hr {
     max-width: 50px;
     border-color: #759d9f;
@@ -362,6 +358,9 @@ header {
     position: relative;
     text-align: center;
     width: 100%;
+    position: relative;
+    height: 100vh;
+    z-index: 0;
 }
 
 .color-overlay {
@@ -374,23 +373,20 @@ header {
     z-index: 99;
 }
 
-header figure {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-}
-
 header video {
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    min-height: 50%;
-    min-width: 50%;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
 }
 
 header .header-content {
@@ -433,10 +429,6 @@ header .header-content p {
     margin-bottom: 25px;
 }
 
-.row-story img {
-    margin-top: 30px;
-}
-
 .row-story p {
     line-height: 1.8;
     margin-bottom: 20px;
@@ -460,6 +452,25 @@ header .header-content p {
     color: #a2bdbe;
     font-family: 'Raleway', sans-serif;
     margin: 25px 0;
+}
+
+.gifts .btn-gift {
+    border-radius: 3px;
+    width: 150px;
+}
+
+.gifts .btn-gift:hover {
+    opacity: 0.7;
+}
+
+.gifts .paypal {
+    background: #0070ba;
+    padding: 7px 16px;
+}
+
+.gifts .venmo {
+    background: #3d95ce;
+    padding: 11px 16px;
 }
 
 .text-primary {
@@ -625,6 +636,10 @@ footer {
     padding-top: 50px;
 }
 
+footer .container {
+    width: auto;
+}
+
 footer p {
     margin-bottom: 0;
 }
@@ -634,6 +649,10 @@ footer p {
     font-size: 12px;
     margin-top: 50px;
     padding: 15px 0;
+}
+
+.modal-title {
+    font-size: 24px;
 }
 
 .modal-header {

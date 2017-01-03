@@ -92,7 +92,7 @@ $(document).ready(function() {
   // Validate Form Submit
   var $fields = $('#modal .form-control.required'),
       $submitButton = $('.modal-footer .btn-primary[type="submit"]'),
-      $errorMessage = $('.error-message');
+      $errorMessage = $('.modal-footer .error-message');
 
   $fields.keyup(function() {
     var $emptyFields = $fields.filter(function() {
