@@ -64,6 +64,7 @@ $(document).ready(function() {
     "derrickwu","margaretcho",
     "danielpark","gloriasong","gloriapark",
     "alexvareta","lysettevareta",
+    "stephanietang","stephanievasquez","tonyvasquez",
     "cristeenkim","cristinelee","frankkim",
     "mikelthomas",
     "dianasearle",
