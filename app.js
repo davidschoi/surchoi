@@ -95,7 +95,7 @@ $(document).ready(function() {
       $submitButton = $('.modal-footer .btn-primary[type="submit"]'),
       $errorMessage = $('.modal-footer .error-message');
 
-  $fields.bind("change keyup", function() {
+  $fields.bind("blur keyup change click", function() {
     var $emptyFields = $fields.filter(function() {
       return $.trim(this.value) === '';
     });
