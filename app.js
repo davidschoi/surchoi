@@ -75,7 +75,7 @@ $(document).ready(function() {
     "richardlee","hestialim","hestialee",
     "philjung","phillipjung","hannahjung","hannahsheen",
     "sophiecho","sophiekim","paulkim",
-    "michellehong","michellekim","jonathankim","jonkim"
+    "michellehong","michellekim","jonathankim","jonkim",
     "richardpark","christineyun",
     "davidkim","tammykim"
   ];
