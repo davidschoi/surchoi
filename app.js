@@ -70,6 +70,7 @@ $(document).ready(function() {
     "dianasearle",
     "eugeneeum","jenniferlee",
     "annasanders","annasanderslee","annalee","chenghoulee","cheng-houlee",
+    "franciscorufino","francisco",
     "andykwon","andrewkwon","dianekwon","dianeluong","dianeluongkwon",
     "ericcho",
     "richardlee","hestialim","hestialee",
