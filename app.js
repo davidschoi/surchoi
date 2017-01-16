@@ -45,26 +45,23 @@ $(document).ready(function() {
   $inputAttending.val('yes');
 
   $('input[value="yes"]').click(function() {
-    console.log('attending');
     $inputAttending.val('yes');
   });
 
   $('input[value="no"]').click(function() {
-    console.log('not attending');
     $inputAttending.val('no');
   });
 
   // +1 condition display
   var plusOneArray = [
     "jasonchoi",
-    "jenniferlee",
     "helenoh",
     "juliepak",
     "joshyoon","joshuayoon","eunicepark","euniceyoon",
     "derrickwu","margaretcho",
     "danielpark","gloriasong","gloriapark",
     "alexvareta","lysettevareta",
-    "stephanietang","stephanievasquez","tonyvasquez",
+    "stephanietang","tonyvasquez",
     "cristeenkim","cristinelee","frankkim",
     "mikelthomas",
     "dianasearle",
@@ -72,6 +69,7 @@ $(document).ready(function() {
     "annasanders","annasanderslee","annalee","chenghoulee","cheng-houlee",
     "franciscorufino","francisco",
     "andykwon","andrewkwon","dianekwon","dianeluong","dianeluongkwon",
+    "gilbertkim",
     "ericcho",
     "richardlee","hestialim","hestialee",
     "philjung","phillipjung","hannahjung","hannahsheen",
