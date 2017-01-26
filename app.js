@@ -52,6 +52,7 @@ $(document).ready(function() {
     $inputAttending.val('no');
   });
 
+/*
   // +1 condition display
   var plusOneArray = [
     "jasonchoi",
@@ -108,6 +109,7 @@ $(document).ready(function() {
       $submitButton.prop('disabled', true);
     }
   });
+*/
 
   $('.btn-submit-container').click(function() {
     $errorMessage.removeClass('hidden');
