@@ -40,6 +40,7 @@ $(document).ready(function() {
     }
   });
 
+/*
   // Attending Input Radio Submit to Google Form
   var $inputAttending = $('input[name="entry.519471964"]');
   $inputAttending.val('yes');
@@ -52,7 +53,6 @@ $(document).ready(function() {
     $inputAttending.val('no');
   });
 
-/*
   // +1 condition display
   var plusOneArray = [
     "jasonchoi",
