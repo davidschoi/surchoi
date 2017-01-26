@@ -109,9 +109,9 @@ $(document).ready(function() {
       $submitButton.prop('disabled', true);
     }
   });
-*/
 
   $('.btn-submit-container').click(function() {
     $errorMessage.removeClass('hidden');
   });
+*/
 });
