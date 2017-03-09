@@ -629,6 +629,15 @@ img::-moz-selection {
     background: 0 0;
 }
 
+.stanza {
+    margin-bottom: 20px;
+}
+
+.stanza p {
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
 footer {
     background: #eee;
     color: #666;
