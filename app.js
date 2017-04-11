@@ -1,6 +1,9 @@
 'use strict';
 
 $(document).ready(function() {
+  // Show Modal on page load
+  $('#modal').modal('show');
+
   // Resize home background to fill viewport
   var $headerContent = $('header .header-content');
   var windowHeight = $(window).height();
@@ -35,8 +38,6 @@ $(document).ready(function() {
   $('#nav').affix({
     offset: { top: 100 }
   });
-
-  $('.modal').modal('show');
 
   // // Attending Input Radio Submit to Google Form
   // var $inputAttending = $('input[name="entry.519471964"]');
