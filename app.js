@@ -19,9 +19,7 @@ $(document).ready(function() {
   });
 
   // Highlight the top nav during scrolling
-  $('body').scrollspy({
-    target: '.navbar-fixed-top',
-  })
+  $('body').scrollspy({ target: '.navbar-fixed-top' });
 
   // Closes responsive menu on menu item click
   $('.navbar-collapse ul li a').click(function() {
@@ -35,86 +33,81 @@ $(document).ready(function() {
 
   // Offset for main navigation
   $('#nav').affix({
-    offset: {
-      top: 100
-    }
+    offset: { top: 100 }
   });
 
-  // Show Modal on pageload
   $('.modal').modal('show');
 
-/*
-  // Attending Input Radio Submit to Google Form
-  var $inputAttending = $('input[name="entry.519471964"]');
-  $inputAttending.val('yes');
+  // // Attending Input Radio Submit to Google Form
+  // var $inputAttending = $('input[name="entry.519471964"]');
+  // $inputAttending.val('yes');
 
-  $('input[value="yes"]').click(function() {
-    $inputAttending.val('yes');
-  });
+  // $('input[value="yes"]').click(function() {
+  //   $inputAttending.val('yes');
+  // });
 
-  $('input[value="no"]').click(function() {
-    $inputAttending.val('no');
-  });
+  // $('input[value="no"]').click(function() {
+  //   $inputAttending.val('no');
+  // });
 
-  // +1 condition display
-  var plusOneArray = [
-    "jasonchoi",
-    "helenoh",
-    "juliepak",
-    "joshyoon","joshuayoon","eunicepark","euniceyoon",
-    "derrickwu","margaretcho",
-    "danielpark","gloriasong","gloriapark",
-    "alexvareta","lysettevareta",
-    "stephanietang","tonyvasquez",
-    "cristeenkim","cristinelee","frankkim",
-    "mikelthomas",
-    "dianasearle",
-    "eugeneeum","jenniferlee",
-    "annasanders","annasanderslee","annalee","chenghoulee","cheng-houlee",
-    "franciscorufino","francisco",
-    "andykwon","andrewkwon","dianekwon","dianeluong","dianeluongkwon",
-    "gilbertkim",
-    "ericcho",
-    "richardlee","hestialim","hestialee",
-    "philjung","phillipjung","hannahjung","hannahsheen",
-    "sophiecho","sophiekim","paulkim",
-    "michellehong","michellekim","jonathankim","jonkim",
-    "richardpark","christineyun",
-    "davidkim","tammykim"
-  ];
+  // // +1 condition display
+  // var plusOneArray = [
+  //   "jasonchoi",
+  //   "helenoh",
+  //   "juliepak",
+  //   "joshyoon","joshuayoon","eunicepark","euniceyoon",
+  //   "derrickwu","margaretcho",
+  //   "danielpark","gloriasong","gloriapark",
+  //   "alexvareta","lysettevareta",
+  //   "stephanietang","tonyvasquez",
+  //   "cristeenkim","cristinelee","frankkim",
+  //   "mikelthomas",
+  //   "dianasearle",
+  //   "eugeneeum","jenniferlee",
+  //   "annasanders","annasanderslee","annalee","chenghoulee","cheng-houlee",
+  //   "franciscorufino","francisco",
+  //   "andykwon","andrewkwon","dianekwon","dianeluong","dianeluongkwon",
+  //   "gilbertkim",
+  //   "ericcho",
+  //   "richardlee","hestialim","hestialee",
+  //   "philjung","phillipjung","hannahjung","hannahsheen",
+  //   "sophiecho","sophiekim","paulkim",
+  //   "michellehong","michellekim","jonathankim","jonkim",
+  //   "richardpark","christineyun",
+  //   "davidkim","tammykim"
+  // ];
 
-  var $inputName = $('input[name="entry.140860861"]'),
-      $inputPlusOneContainer = $('input[name="entry.1624099299"]').parents('.form-group');
+  // var $inputName = $('input[name="entry.140860861"]'),
+  //     $inputPlusOneContainer = $('input[name="entry.1624099299"]').parents('.form-group');
 
-  $inputName.keyup(function() {
-    $inputPlusOneContainer.addClass('hidden');
-    if($.inArray(this.value.toLowerCase().replace(' ', ''), plusOneArray) > -1) {
-      $inputPlusOneContainer.removeClass('hidden');
-    }
-  });
+  // $inputName.keyup(function() {
+  //   $inputPlusOneContainer.addClass('hidden');
+  //   if($.inArray(this.value.toLowerCase().replace(' ', ''), plusOneArray) > -1) {
+  //     $inputPlusOneContainer.removeClass('hidden');
+  //   }
+  // });
 
-  // Validate Form Submit
-  var $fields = $('#modal .form-control.required'),
-      $submitButton = $('.modal-footer .btn-primary[type="submit"]'),
-      $errorMessage = $('.modal-footer .error-message');
+  // // Validate Form Submit
+  // var $fields = $('#modal .form-control.required'),
+  //     $submitButton = $('.modal-footer .btn-primary[type="submit"]'),
+  //     $errorMessage = $('.modal-footer .error-message');
 
-  $fields.bind("blur keyup change click", function() {
-    var $emptyFields = $fields.filter(function() {
-      return $.trim(this.value) === '';
-    });
+  // $fields.bind("blur keyup change click", function() {
+  //   var $emptyFields = $fields.filter(function() {
+  //     return $.trim(this.value) === '';
+  //   });
 
-    $submitButton.attr('disabled', true);
+  //   $submitButton.attr('disabled', true);
 
-    if (!$emptyFields.length) {
-      $errorMessage.addClass('hidden');
-      $submitButton.prop('disabled', false);
-    } else {
-      $submitButton.prop('disabled', true);
-    }
-  });
+  //   if (!$emptyFields.length) {
+  //     $errorMessage.addClass('hidden');
+  //     $submitButton.prop('disabled', false);
+  //   } else {
+  //     $submitButton.prop('disabled', true);
+  //   }
+  // });
 
-  $('.btn-submit-container').click(function() {
-    $errorMessage.removeClass('hidden');
-  });
-*/
+  // $('.btn-submit-container').click(function() {
+  //   $errorMessage.removeClass('hidden');
+  // });
 });
