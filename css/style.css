@@ -199,7 +199,7 @@ aside {
     box-shadow: none;
 }
 
-@media(min-width:768px) {
+@media(min-width:891px) {
     .navbar-default {
         background: transparent;
         border-color: transparent;
@@ -229,14 +229,62 @@ aside {
         color: #fff;
     }
 
-    .navbar-default .nav>li>a.modal {
+    .navbar-default .nav>li>a.modal-link {
         border: 1px solid white;
         border-radius: 3px;
         margin: 20px;
         padding: 10px 20px;
     }
 
-    .navbar-default .nav>li>a.modal:hover {
+    .navbar-default .nav>li>a.modal-link:hover {
+        background: #fff;
+        color: #759d9f;
+        font-weight: 400;
+    }
+
+    .navbar-default.affix .nav>li>a.modal-link,
+    .navbar-default.affix .nav>li>a.modal-link:focus {
+        background: #759d9f;
+        font-weight: 400;
+        border: 0;
+        border-radius: 3px;
+        color: #fff;
+        margin: 5px 15px;
+        padding: 10px 25px;
+    }
+
+    .navbar-default.affix .nav>li>a.modal-link:hover {
+        background: #a2bdbe;
+        color: #fff !important;
+    }
+
+    .navbar-default .btn-group {
+        margin: 20px;
+        overflow: hidden;
+    }
+
+    .navbar-default.affix .btn-group {
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    .navbar-default .nav>li>a.btn-group-item {
+        border: 1px solid #fff;
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
+        float: left;
+        padding: 10px 20px;
+    }
+
+    .navbar-default .nav>li>a.btn-group-item:first-child {
+        border-left: 1px solid #fff;
+    }
+
+    .navbar-default .nav>li>a.btn-group-item:last-child {
+        border-radius: 0 3px 3px 0;
+    }
+
+    .navbar-default .nav>li>a.btn-group-item:hover {
         background: #fff;
         color: #759d9f;
         font-weight: 400;
@@ -290,17 +338,32 @@ aside {
         font-weight: 400;
     }
 
-    .navbar-default.affix .nav>li>a.modal {
+    .navbar-default.affix .nav>li>a.btn-group-item {
         background: #759d9f;
-        font-weight: 400;
-        border: 0;
-        border-radius: 3px;
+        border-right: 1px solid #a2bdbe;
+        border-radius: 3px 0 0 3px;
         color: #fff;
-        margin: 5px 15px;
-        padding: 10px 25px;
+        font-weight: 400;
+        margin: 5px 0;
+        padding: 10px 15px;
     }
 
-    .navbar-default.affix .nav>li>a.modal:hover {
+    .navbar-default.affix .nav>li>a.btn-group-item:first-child {
+        border-left: 1px solid #fff;
+    }
+
+    .navbar-default.affix .nav>li>a.btn-group-item:last-child {
+        border-radius: 0 3px 3px 0;
+        border-right: 0;
+    }
+
+    .navbar-default.affix .nav>li>a.btn-group-item:hover {
+        background: #fff;
+        color: #759d9f;
+        font-weight: 400;
+    }
+
+    .navbar-default.affix .nav>li>a.btn-group-item:hover {
         background: #a2bdbe;
         color: #fff !important;
     }
@@ -314,17 +377,13 @@ aside {
     }
 }
 
-@media(max-width:830px) and (min-width:768px) {
-    .navbar-default .nav>li>a {
-        padding: 30px 15px;
-    }
-
-    .navbar-default .nav>li>a.modal {
-        margin: 20px 10px;
+@media(max-width:891px) and (min-width:768px) {
+    .navbar-default .nav>li>a.btn-group-item {
+        float: left;
     }
 }
 
-@media(max-width:767px) {
+@media(max-width:891px) {
     .navbar-default .navbar-header .navbar-brand .logo-white {
         display: none;
     }
@@ -414,6 +473,11 @@ header .header-content hr {
 header .header-content p {
     color: #ccc;
     margin-bottom: 0;
+}
+
+header .btn-group .btn-xl:first-child {
+    border-right: 1px solid #a2bdbe;
+    margin-right: 1px;
 }
 
 #wedding .map-container img {
@@ -664,6 +728,29 @@ footer p {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
     font-weight: 500;
+}
+
+.modal-body a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.modal-body a:hover {
+    text-decoration: none;
+}
+
+.modal-body h4 {
+    font-size: 24px;
+}
+
+.modal-body .flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.modal-body .flex-item {
+    flex: 1 100%;
 }
 
 .modal-body .radio {

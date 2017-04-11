@@ -40,6 +40,9 @@ $(document).ready(function() {
     }
   });
 
+  // Show Modal on pageload
+  $('.modal').modal('show');
+
 /*
   // Attending Input Radio Submit to Google Form
   var $inputAttending = $('input[name="entry.519471964"]');
