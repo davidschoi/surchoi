@@ -1,4 +1,4 @@
-#DAVID & JEAN Wedding Website
+# DAVID & JEAN Wedding Website
 
 This repository features a simple HTML/CSS/JavaScript solution for a wedding website
 
