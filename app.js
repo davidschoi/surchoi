@@ -1,9 +1,6 @@
 'use strict';
 
 $(document).ready(function() {
-  // Show Modal on page load
-  $('#modal').modal('show');
-
   // Resize home background to fill viewport
   var $headerContent = $('header .header-content');
   var windowHeight = $(window).height();
