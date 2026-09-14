@@ -31,6 +31,24 @@ $(document).ready(function() {
     $('#modal .close').click();
   });
 
+  // Mount the video embed only once the modal is visible. YouTube picks its
+  // poster image from the player size at load time, so loading the iframe
+  // while the modal is still display:none makes it choose the smallest
+  // thumbnail, which then gets stretched and looks blurry. Clearing src on
+  // close also stops playback.
+  var $modal = $('#modal');
+
+  $modal.on('shown.bs.modal', function() {
+    var $iframe = $modal.find('iframe[data-src]');
+    if (!$iframe.attr('src')) {
+      $iframe.attr('src', $iframe.data('src'));
+    }
+  });
+
+  $modal.on('hidden.bs.modal', function() {
+    $modal.find('iframe[data-src]').attr('src', '');
+  });
+
   // Offset for main navigation
   $('#nav').affix({
     offset: { top: 100 }

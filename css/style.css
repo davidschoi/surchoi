@@ -769,3 +769,20 @@ footer p {
 .modal-footer {
     background: #eee;
 }
+
+/* 16:9 box for the video embed. Without this the iframe is letterboxed and
+   its poster image gets cover-cropped. */
+.video-embed {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
