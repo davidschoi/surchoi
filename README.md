@@ -1,4 +1,4 @@
-# DAVID & JEAN Wedding Website
+# David & Jean Wedding Website
 
 A single-page wedding site built with plain HTML, CSS, and JavaScript. No framework, no build step.
 
@@ -15,24 +15,10 @@ Bootstrap 3.2, jQuery 3.1.1, and jQuery Easing load from CDNs; type comes from G
 
 ## Run it locally
 
-Serve the repo root over HTTP:
+Serve the repo root over HTTP, then open http://localhost:3000:
 
 ```
 git clone https://github.com/davidschoi/surchoi.git
 cd surchoi
-python3 -m http.server 8000
+npx serve
 ```
-
-Then open http://localhost:8000.
-
-Don't open `index.html` straight off disk — the vendor scripts use protocol-relative URLs
-(`//cdnjs.cloudflare.com/...`), which resolve to `file://` and fail, so Bootstrap and jQuery
-never load and the page renders unstyled and inert.
-
-## Deploying
-
-`main` is the primary branch. There is no build step or CI config — both hosts publish the
-files as they are on `main`.
-
-- **Production:** https://wedding.choifam.com, served by Vercel
-- **GitHub Pages mirror:** https://davidschoi.github.io/surchoi/, built from `main` at the repo root
