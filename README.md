@@ -8,7 +8,7 @@ Updates will be made using Github Pages
 **To view the final single page app:**
 ```
 # from this repo
-git checkout master
+git checkout main
 ```
 
 ## Set Up
